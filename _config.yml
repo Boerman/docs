@@ -2,14 +2,14 @@
 # Site
 
 title: Documentation
-url: "https://long-pig.cloudvent.net"
+url: "http://docs.boerman.co"
 baseurl:
 google_analytics_key:
 show_full_navigation: true
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
-description: Product documentation template for Jekyll.
+description: Doc pages for Boerman libraries.
 author:
   name:
   email:
