@@ -11,4 +11,4 @@ There are several methods available for starting the server, stopping the server
 
 In case you want to be notified when a client has connected, disconnected or has sent you something you can subscribe to a set events.
 
-Methods which do not have an immediate return
+Methods which do not have an immediate return value implement the async / await patterns.
