@@ -39,7 +39,7 @@ The `Start()` method starts the server and starts waiting for incoming connectio
 Events are being used to notify you about interesting things happening. You can subscribe to any of the following events:
 
 * **Connected**&nbsp;– A client just connected with the server.
-* **DataReceived**&nbsp;– You just received some data from a connected client.
+* **Received**&nbsp;– You just received some data from a connected client.
 * **Disconnected**&nbsp;– A previously connected client just disconnected.
 
 An example on subscribing to the `Connected` event is given below.
@@ -56,7 +56,7 @@ The `sender` object in all events is the instance of the TCP server which fired 
 
 ### Reading Received Data
 
-As it should be pretty obvious to everyone the `DataReceived` event can be used to retrieve data sent to the server from client. The `DataReceivedEventArgs` passed with this event contains both the EndPoint of the sending client and the data. You can retrieve both the byte representation and the string representation with respectively the `Bytes` and `Data` properties. In case you retrieve the string value the EventArgs class will retrieve the string using the encoding used while instantiating the server instance or the default encoding which is UTF-8.
+As it should be pretty obvious to everyone the `Received` event can be used to retrieve data sent to the server from client. The `ReceivedEventArgs` passed with this event contains both the EndPoint of the sending client and the data. You can retrieve both the byte representation and the string representation with respectively the `Bytes` and `Data` properties. In case you retrieve the string value the EventArgs class will retrieve the string using the encoding used while instantiating the server instance or the default encoding which is UTF-8.
 
 ### Sending Data
 
