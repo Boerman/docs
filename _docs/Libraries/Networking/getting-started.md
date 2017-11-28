@@ -45,4 +45,4 @@ dotnet add package Boerman.Networking
 
 ### Building From Scratch
 
-As the library doesn't have any fancy dependencies outside the .NET Framework you could clone [the repo](https://github.com/Boerman/Boerman.TcpLib) and you would be good to go.
+As the library doesn't have any fancy dependencies outside the .NET Framework you could clone [the repo](https://github.com/Boerman/Boerman.Networking) and you would be good to go.
