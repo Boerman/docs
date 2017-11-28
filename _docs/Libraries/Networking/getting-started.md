@@ -11,8 +11,8 @@ Thank you for checking out these docs! The [`Boerman.Networking`](https://github
 
 This library can help you with the following components:
 
-* TCP server
-* TCP client
+* [TCP server](/Libraries/Networking/tcp-server/)
+* [TCP client](/Libraries/Networking/tcp-client/)
 * APRS client
 
 These libraries are developed to be as **performant**, **stable** and **reliable** as possible. In practice this means that this library will not require and utilize a single core only to receive data from a connected party.
@@ -25,7 +25,7 @@ At this moment the compiled libraries available at NuGet only target .NET Standa
 
 Due to cross platform considerations we chose only support .NET Standard 2.0 at the moment.
 
-Installation
+## Installation
 
 ### NuGet
 
