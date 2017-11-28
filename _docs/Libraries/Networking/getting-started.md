@@ -5,7 +5,7 @@ order: 1
 ---
 
 
-Thank you for checking out these docs! The [`Boerman.Networking`](https://github.com/Boerman/Boerman.TcpLib) library provides simple to use networking capabilities on the .NET framework. This library is for you if you do not want to know too much about the underlying protocols yet you want to have a powerful toolchain for quickly building networking enabled applications.
+Thank you for checking out these docs! The [`Boerman.Networking`](https://github.com/Boerman/Boerman.Networking) library provides simple to use networking capabilities on the .NET framework. This library is for you if you do not want to know too much about the underlying protocols yet you want to have a powerful toolchain for quickly building networking enabled applications.
 
 ## Features
 
