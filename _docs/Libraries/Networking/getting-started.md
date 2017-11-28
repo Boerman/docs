@@ -21,9 +21,7 @@ These libraries are developed to be as **performant**, **stable** and **reliable
 
 At this moment the compiled libraries available at NuGet only target .NET Standard 2.0.
 
-> It should be fairly easy to target .NET 4.7.1 when compiling the source code yourself, but please note mileage may vary and you're on your own.
-
-Due to cross platform considerations we chose only support .NET Standard 2.0 at the moment.
+It is possible whatsoever to use this [.NET Standard 2.0 library with .NET Framework 4.6.1 and onwards](https://github.com/dotnet/standard/issues/514).
 
 ## Installation
 
