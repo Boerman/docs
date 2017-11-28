@@ -35,7 +35,7 @@ Please note that the `Open()` method is asynchronous. This way the function will
 The event subscription system for the TCP client is the same as it is being used in the TCP server. You can subscribe to the following events:
 
 * **Connected**&nbsp;– The client just connected with the server.
-* **DataReceived**&nbsp;– The client just received data from the server.
+* **Received**&nbsp;– The client just received data from the server.
 * **Disconnected**&nbsp;– The client just (got) disconnected from the server.
 
 An example of an event subscription is given below:
@@ -50,7 +50,7 @@ The `sender` object used in these events is the instance of the TCP client which
 
 ### Reading Received Data
 
-The process to read received data is exactly the same as it is with the TCP server. The `DataReceivedEventArgs` passed with the event contains both the endpoint from which this data was sent and the data which was sent. You can retrieve both the byte and string representations by using the `Bytes` and / or `Data` properties on this event args object. When retrieving the string representation please note that the encoding will be used which is configured during client instantiation or the default (UTF-8).
+The process to read received data is exactly the same as it is with the TCP server. The `ReceivedEventArgs` passed with the event contains both the endpoint from which this data was sent and the data which was sent. You can retrieve both the byte and string representations by using the `Bytes` and / or `Data` properties on this event args object. When retrieving the string representation please note that the encoding will be used which is configured during client instantiation or the default (UTF-8).
 
 ### Sending Data
 
