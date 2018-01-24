@@ -1,5 +1,5 @@
 ---
 title: Getting Started
-category:
+category: Boerman.AprsClient
 order: 1
 ---
