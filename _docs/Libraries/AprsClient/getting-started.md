@@ -13,3 +13,21 @@ This project has been kickstarted by code found on [aprs.codeplex.com](aprs.code
 - Event handlers have been added to be able to plug in more easily on incoming messages.
 - Support for [OGN flavoured APRS] has been added.
 
+## Platform Support
+The compiled libraries available at NuGet target .NET Standard 2.0. Therefore, this library is cross platform compatible under the .NET framework.
+
+## Installation
+
+### NuGet
+The *Boerman.AprsClient* library is available through NuGet. To install the library using the NuGet command line:
+
+    Install-Package Boerman.AprsClient
+
+### .NET CLI
+To install the library through the .NET CLI you can use the following command:
+
+    dotnet add package Boerman.AprsClient
+
+### Building From Scratch
+
+You will be able to build the library from scratch by cloning the git repository and restoring the NuGet packages.
