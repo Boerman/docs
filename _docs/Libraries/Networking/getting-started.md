@@ -13,7 +13,6 @@ This library can help you with the following components:
 
 * [TCP server](/Libraries/Networking/tcp-server/)
 * [TCP client](/Libraries/Networking/tcp-client/)
-* APRS client
 
 These libraries are developed to be as **performant**, **stable** and **reliable** as possible. In practice this means that this library will not require and utilize a single core only to receive data from a connected party.
 
