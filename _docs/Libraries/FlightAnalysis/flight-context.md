@@ -21,10 +21,10 @@ FlightContext flightContext = new FlightContext();
 
 Due to the asynchronous nature of the information we're handling in most situations it is required to subscribe to events in order to retrieve relevant information. The following events are available to subscribe to:
 
-* `OnTakeoff` when the aircraft being tracked has taken off.
-* `OnLanding` when the aircraft being tracked has landed.
-* `OnRadarContact` will fire when a previously unseen aircraft has been detected.
-* `CompletedWithErrors` will fire when an aircraft was flying but a landing could not be detected within a reasonable timeframe.
+* `OnTakeoff`; when the aircraft being tracked has taken off.
+* `OnLanding`; when the aircraft being tracked has landed.
+* `OnRadarContact`; will fire when a previously unseen aircraft has been detected.
+* `CompletedWithErrors`; will fire when an aircraft was flying but a landing could not be detected within a reasonable timeframe.
 
 Flight information is passed on with the event args for all these events.
 
