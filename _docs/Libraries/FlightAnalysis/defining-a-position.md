@@ -1,7 +1,7 @@
 ---
 title: Defining A Position
 category: Boerman.FlightAnalysis
-order: 2
+order: 3
 ---
 
 
@@ -21,5 +21,3 @@ This information is the basis on which both the `FlightContext` and `FlightConte
 A `PositionUpdate` instance is immutable and can be initialized by using the constructor.
 
 `public PositionUpdate(string aircraft, DateTime timeStamp, double latitude, double longitude, double altitude, double speed, double heading)`
-
-&nbsp;
