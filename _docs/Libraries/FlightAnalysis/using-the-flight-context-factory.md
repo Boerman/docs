@@ -1,7 +1,7 @@
 ---
 title: Using the Flight Context Factory
 category: Boerman.FlightAnalysis
-order: 4
+order: 5
 ---
 
 
@@ -11,14 +11,15 @@ The `FlightContextFactory` object is a factory wrapper around the `FlightContext
 
 To create a basic `FlightContextFactory` instance you can immediately use for flight processing:
 
-    FlightContextFactory factory = new FlightContextFactory();
-
+```
+FlightContextFactory factory = new FlightContextFactory();
+```
 
 ## How It Helps You
 
 Why would you want to use the `FlightContextFactory` over the `FlightContext` object?
 
-The `FlightContextFactory` object will instantiate a new `FlightContext` object for you each time information from a new aircraft is being detected.&nbsp;*In order for this to work it is required that you use the `aircraftId` field on the `PositionUpdate` object to identify different aircraft!*&nbsp;The `FlightContextFactory` will also clean up old information from aircraft which have been gone for a while in order to prevent high memory usage. Besides this the object subscribes to all events on each individual `FlightContext` instance and propagates them through the events available on the `FlightContextFactory` object so you will have a single endpoint to retrieve information for all different aircraft you're tracking.
+The `FlightContextFactory` object will instantiate a new `FlightContext` object for you each time information from a new aircraft is being detected. *In order for this to work it is required that you use the `aircraftId` field on the `PositionUpdate` object to identify different aircraft!* The `FlightContextFactory` will also clean up old information from aircraft which have been gone for a while in order to prevent high memory usage. Besides this the object subscribes to all events on each individual `FlightContext` instance and propagates them through the events available on the `FlightContextFactory` object so you will have a single endpoint to retrieve information for all different aircraft you're tracking.
 
 ## Available Events
 
@@ -38,12 +39,14 @@ In order to keep track of multiple aircraft at the same time you can pass positi
 
 The `FlightContextFactory` will automatically handle position information based on the aircraft id associated with the position update.
 
-    FlightContextFactory factory = new FlightContextFactory();
-    
-    // It's completely up to you where you get this data from!
-    PositionUpdate positionUpdate = new PositionUpdate(.....);
-    
-    factory.Enqueue(positionUpdate);
+```
+FlightContextFactory factory = new FlightContextFactory();
+
+// It's completely up to you where you get this data from!
+PositionUpdate positionUpdate = new PositionUpdate(.....);
+
+factory.Enqueue(positionUpdate);
+```
 
 As soon as something interesting happens you will be informed by an event!
 
@@ -51,11 +54,13 @@ As soon as something interesting happens you will be informed by an event!
 
 In order to process a collection of data you can just pass a collection of position updates to the `FlightContextFactory`. It will take care of ordering the position updates by aircraft for you!
 
-    FlightContextFactory factory = new FlightContextFactory();
-    
-    List<PositionUpdate> positionUpdates = new List<PositionUpdate>();
-    // I don't really care where you got this information from... Just fill the list!
-    
-    factory.Enqueue(positionUpdates);
-    
+```
+FlightContextFactory factory = new FlightContextFactory();
+
+List<PositionUpdate> positionUpdates = new List<PositionUpdate>();
+// I don't really care where you got this information from... Just fill the list!
+
+factory.Enqueue(positionUpdates);
+```
+
 Again, when something exciting happens an event will keep you informed!
