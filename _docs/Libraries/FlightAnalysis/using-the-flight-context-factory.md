@@ -35,10 +35,24 @@ In order to keep track of multiple aircraft at the same time you can pass positi
 
 The `FlightContextFactory` will automatically handle position information based on the aircraft id associated with the position update.
 
-&nbsp;
+    FlightContextFactory factory = new FlightContextFactory();
+    
+    // It's completely up to you where you get this data from!
+    PositionUpdate positionUpdate = new PositionUpdate(.....);
+    
+    factory.Enqueue(positionUpdate);
+
+As soon as something interesting happens you will be informed by an event!
 
 ## Batch Processing Data
 
 In order to process a collection of data you can just pass a collection of position updates to the `FlightContextFactory`. It will take care of ordering the position updates by aircraft for you!
 
-&nbsp;
+    FlightContextFactory factory = new FlightContextFactory();
+    
+    List<PositionUpdate> positionUpdates = new List<PositionUpdate>();
+    // I don't really care where you got this information from... Just fill the list!
+    
+    factory.Enqueue(positionUpdates);
+    
+Again, when something exciting happens an event will keep you informed!
