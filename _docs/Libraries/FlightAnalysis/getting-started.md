@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-category:
+category: Boerman.FlightAnalysis
 order: 1
 ---
 
