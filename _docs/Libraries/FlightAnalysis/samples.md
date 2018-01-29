@@ -5,4 +5,4 @@ order: 5
 ---
 
 
-A pretty straightforward implementation of this library is available in [the tests which are available on GitHub](https://github.com/Boerman/FlightAnalysis/tree/master/Boerman.FlightAnalysis.Tests).
+Pretty straightforward implementations of both the `FlightContext` and `FlightContextFactory` from this library are available in [the tests which are available on GitHub](https://github.com/Boerman/FlightAnalysis/tree/master/Boerman.FlightAnalysis.Tests).
