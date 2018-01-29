@@ -4,7 +4,7 @@
 title: Documentation
 url: "http://docs.boerman.co"
 baseurl:
-google_analytics_key:
+google_analytics_key: "UA-45114631-7"
 show_full_navigation: true
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
