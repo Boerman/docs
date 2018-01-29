@@ -9,11 +9,14 @@ The `FlightContextFactory` object is a factory wrapper around the `FlightContext
 
 ## Basic Example
 
-To get started using the `FlightContextFactory`:
+To create a basic `FlightContextFactory` instance you can immediately use for flight processing:
 
-// Insert basic example
+    FlightContextFactory factory = new FlightContextFactory();
+
 
 ## How It Helps You
+
+Why would you want to use the `FlightContextFactory` over the `FlightContext` object?
 
 The `FlightContextFactory` object will instantiate a new `FlightContext` object for you each time information from a new aircraft is being detected.&nbsp;*In order for this to work it is required that you use the `aircraftId` field on the `PositionUpdate` object to identify different aircraft!*&nbsp;The `FlightContextFactory` will also clean up old information from aircraft which have been gone for a while in order to prevent high memory usage. Besides this the object subscribes to all events on each individual `FlightContext` instance and propagates them through the events available on the `FlightContextFactory` object so you will have a single endpoint to retrieve information for all different aircraft you're tracking.
 
