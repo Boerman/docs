@@ -5,7 +5,7 @@ order: 2
 ---
 
 
-The goal of this library is to provide metadata about flights being made in near real time. This library is capable of providing the following information:
+The goal of this library is to provide metadata about flights being made in near real time. This library is capable of providing the following information based on position information from a single aircraft:
 
 * Departure location
 * Departure heading
