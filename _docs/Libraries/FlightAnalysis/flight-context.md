@@ -13,8 +13,9 @@ All input information is processed as soon as possible. It is possible to proces
 
 To get started using the `FlightContext`:
 
-    FlightContext flightContext = new FlightContext();
-
+```
+FlightContext flightContext = new FlightContext();
+```
 
 ## Available Events
 
@@ -31,15 +32,16 @@ Flight information is passed on with the event args for all these events.
 
 In order to be able to process information real time you have to make sure that each bit of information (each individual position update) is being sent to the `FlightContext` instance as soon as possible.
 
-    FlightContext flightContext = new FlightContext();
-    
-    // Asume this position update is retrieved from a realtime source:
-    PositionUpdate positionUpdate = new PositionUpdate(....);
-    
-    flightContext.Enqueue(positionUpdate);
+```
+FlightContext flightContext = new FlightContext();
+
+// Asume this position update is retrieved from a realtime source:
+PositionUpdate positionUpdate = new PositionUpdate(....);
+
+flightContext.Enqueue(positionUpdate);
+```
 
 If something interested just happened you will be notified through an event as soon as possible!
-
 
 ## Batch Processing Information
 
@@ -47,13 +49,16 @@ Batch processing information is as easy as making a collection of position updat
 
 Processing a list of position updates is as easy as processing a single point:
 
-    FlightContext flightContext = new FlightContext();
-    
-    List<PositionUpdate> positionUpdates = new List<PositionUpdate>();
-    // Assuming you fill the list with interesting information here...
-    flightContext.Enqueue(positionUpdates);
+```
+FlightContext flightContext = new FlightContext();
+
+List<PositionUpdate> positionUpdates = new List<PositionUpdate>();
+// Assuming you fill the list with interesting information here...
+flightContext.Enqueue(positionUpdates);
+```
 
 Like the realtime variant, you will be notified of interesting things happening as soon as the position updates have been processed.
 
-    
-    
+## More Advanced Use-Cases
+
+For more advanced use-cases where it is required to handle position updates from multiple different aircraft it is possible to use the `FlightContextFactory`.
