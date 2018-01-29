@@ -28,3 +28,17 @@ These events are available on the `FlightContextFactory` object:
 * `OnContextDispose`; please note this is the only event available on the `FlightContextFactory` object which is not available on the `FlightContext`! This event will fire when a `FlightContext` has been disposed due to inactivity.
 
 As the source from these events can be from an arbitrary `FlightContext` instance under the hood all relevant flight (and aircraft) information will be available through the event args objects available on the events.
+
+## Real-Time Monitoring
+
+In order to keep track of multiple aircraft at the same time you can pass position information to the `FlightContextFactory` as soon as you receive it! Again, the same principles as used with the `FlightContext` are also being used here.
+
+The `FlightContextFactory` will automatically handle position information based on the aircraft id associated with the position update.
+
+&nbsp;
+
+## Batch Processing Data
+
+In order to process a collection of data you can just pass a collection of position updates to the `FlightContextFactory`. It will take care of ordering the position updates by aircraft for you!
+
+&nbsp;
