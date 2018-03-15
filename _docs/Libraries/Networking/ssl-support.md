@@ -18,10 +18,22 @@ If you want a TCP server which only accepts clients with a secure connection you
 
 Besides the instantiation of the TCP server nothing is different from a plain connection.
 
-[For a sample on how to set up a TCP server with SSL encryption, see this folder in the GitHub Repo.](https://github.com/Boerman/Boerman.Networking/tree/master/TcpServerWithSSL)
+[For a sample on how to set up a TCP server with SSL encryption, see this folder in the GitHub repo.](https://github.com/Boerman/Boerman.Networking/tree/master/TcpServerWithSSL)
 
 ## Setting up a TCP client with SSL support
 
-In order to create a TCP client with SSL support enabled there are two additional properties available to set upon opening the connection.
+In order to create a TCP client with SSL support enabled there are two additional properties available to set upon opening the connection. These properties are:
 
-## &nbsp;
+- useSsl
+- allowCertificateChainErrors
+
+Opening a connection can be as follows:
+
+    await tcpClient.Open(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 2626), 
+                         useSsl: true, 
+                         allowCertificateChainErrors: true);
+
+*Please note that it is NOT RECOMMENDED to allow certificate chain errors in production. It's great during development for using self signed certificates but it essentially means no trusted party could verify the validity of the certificate and therefore the integrity of the connection could not be verified.*
+
+[A full working sample for a TCP client connecting with SSL enabled, see this folder in the GitHub repo.](https://github.com/Boerman/Boerman.Networking/tree/master/TcpClientWithSSL)
+
