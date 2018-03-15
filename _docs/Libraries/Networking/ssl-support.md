@@ -14,8 +14,8 @@ If you want a TCP server which only accepts clients with a secure connection you
 
 ```
 var tcpServer = new TcpServer(
-				    new IPEndPoint(IPAddress.Parse("127.0.0.1"), 2626),
-				    new X509Certificate2("cert.pfx", "1234"));
+    new IPEndPoint(IPAddress.Parse("127.0.0.1"), 2626),
+    new X509Certificate2("cert.pfx", "1234"));
 ```
 
 Besides the instantiation of the TCP server nothing is different from a plain connection.
@@ -33,12 +33,14 @@ Opening a connection can be as follows:
 
 ```
 await tcpClient.Open(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 2626),
-				                     useSsl: true,
-				                     allowCertificateChainErrors: true);
+    useSsl: true,
+    allowCertificateChainErrors: true);
 ```
 
 **Please note:*** it is **NOT RECOMMENDED** to allow certificate chain errors in production. It's great during development for using self signed certificates but it essentially means no trusted party could verify the validity of the certificate and therefore the integrity of the connection could not be verified.*
 
 [A full working sample for a TCP client connecting with SSL enabled, see this folder in the GitHub repo.](https://github.com/Boerman/Boerman.Networking/tree/master/TcpClientWithSSL)
+
+[For a sample demonstrating how to make a HTTPS request to google, see this file.](https://github.com/Boerman/Boerman.Networking/blob/master/HttpRequestExample/Program.cs)
 
 *Client authentication using certificates in order to verify the client is currently not supported.*
