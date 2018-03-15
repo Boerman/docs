@@ -1,7 +1,7 @@
 ---
 title: SSL Support
 category: Boerman.Networking
-order: 1
+order: 5
 ---
 
 The `Boerman.Networking` library supports SSL/TLS on both client and server instances. SSL and TLS are protocol which enables end to end encryption of the contents sent between the client and the server over a socket connection. The amazing thing about this technology is that it does not alter the protocol itself, but rather is a wrapper which authenticates the client/server and encrypts and decrypts contents sent over the connection.
@@ -37,10 +37,8 @@ await tcpClient.Open(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 2626),
 				                     allowCertificateChainErrors: true);
 ```
 
-**Please note:***&nbsp;it is **NOT RECOMMENDED** to allow certificate chain errors in production. It's great during development for using self signed certificates but it essentially means no trusted party could verify the validity of the certificate and therefore the integrity of the connection could not be verified.*
+**Please note:*** it is **NOT RECOMMENDED** to allow certificate chain errors in production. It's great during development for using self signed certificates but it essentially means no trusted party could verify the validity of the certificate and therefore the integrity of the connection could not be verified.*
 
 [A full working sample for a TCP client connecting with SSL enabled, see this folder in the GitHub repo.](https://github.com/Boerman/Boerman.Networking/tree/master/TcpClientWithSSL)
-
-&nbsp;
 
 *Client authentication using certificates in order to verify the client is currently not supported.*
